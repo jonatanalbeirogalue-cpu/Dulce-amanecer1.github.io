@@ -1,0 +1,302 @@
+/* style.css */
+
+/* Fuente general, márgenes y colores base */
+body {
+    font-family: Arial, sans-serif;
+    /* Tipografía */
+    margin: 0;
+    /* Quitamos márgenes por defecto */
+    background-color: #ece3a6;
+    /* Fondo gris claro */
+    color: #333;
+    /* Texto gris oscuro */
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    /* Coloca logo y menú en línea */
+    justify-content: space-between;
+    /* Espaciado entre logo y menú */
+    align-items: center;
+    /* Centrado vertical */
+    background-color: #0077cc;
+    /* Fondo azul */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    color: white;
+    /* Texto blanco */
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+    /* Ajusta el tamaño del logo */
+}
+
+/* Menú */
+nav ul {
+    list-style: none;
+    /* Quita viñetas */
+    display: flex;
+    /* Pone los elementos en línea */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+    /* Espacio entre enlaces */
+}
+
+nav ul li a {
+    color: white;
+    /* Texto blanco */
+    text-decoration: none;
+    /* Sin subrayado */
+    font-weight: bold;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 400px;
+    animation: banner 10s infinite linear alternate;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes banner {
+
+    0%,
+    20% {
+        background-image: url("solo.jpeg");
+    }
+
+    25%,
+    45% {
+        background-image: url(panqueso.webp);
+    }
+
+    50%,
+    70% {
+        background-image: url("Panes.jfif");
+    }
+
+    75%,
+    100% {
+        background-image: url("Galletas.jpg");
+    }
+}
+
+.capa {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, 0.6);
+}
+
+.info {
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.info h1 {
+    color: #fff;
+    font-size: 45px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.info p {
+    color: #c7c7c7;
+    line-height: 2.9;
+    margin-bottom: 10px;
+
+}
+
+.info a {
+    color: #fff;
+    text-decoration: none;
+    background: rgb(0, 0, 0, 0.6);
+    padding: 16px 37px;
+    display: inline-block;
+    border-radius: 70px;
+
+}
+
+.slider {
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: white;
+    margin: 20px auto;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Movimiento del slider */
+#slide1:checked~.slides {
+    transform: translateX(0);
+}
+
+#slide2:checked~.slides {
+    transform: translateX(-33.3333%);
+}
+
+#slide3:checked~.slides {
+    transform: translateX(-66.6666%);
+}
+
+/* Botones de navegación */
+.navigation {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.bar {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #bbb;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.bar:hover {
+    background: #333;
+}
+
+/* Botones de acción */
+.acciones {
+    text-align: center;
+    /* Centra botones */
+    margin: 20px 0;
+}
+
+.acciones button {
+    background-color: #6d5a15;
+    /* Naranja */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Mano al pasar el mouse */
+}
+
+.acciones button:hover {
+    background-color: #f1c4e5;
+    /* Más oscuro al pasar el mouse */
+}
+
+/* Formulario de contacto */
+.contacto {
+    background: white;
+    padding: 20px;
+    max-width: 400px;
+    /* Ancho limitado */
+    margin: 20px auto;
+    /* Centrado */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto h2 {
+    text-align: center;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    /* Ocupa todo el ancho */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contacto button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto button:hover {
+    background-color: #005fa3;
+}
+
+/* ========================= */
+/* SECCIÓN DE VIDEO CENTRADO */
+/* ========================= */
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra horizontalmente */
+    justify-content: center;
+    /* Centra verticalmente si hay altura */
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff8f0;
+    /* Fondo suave */
+    margin: 20px 0;
+    /* Espacio con otras secciones */
+}
+
+.video h2 {
+    color: #7b3f00;
+    /* Marrón panadería */
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.8em;
+}
+
+.video video {
+    display: block;
+    max-width: 90%;
+    /* Adaptable a pantallas pequeñas */
+    height: auto;
+    border-radius: 12px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    /* Sombra elegante */
+    margin: 0 auto;
+    /* Centrado horizontal */
+}

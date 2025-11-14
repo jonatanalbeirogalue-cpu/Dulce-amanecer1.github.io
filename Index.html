@@ -1,0 +1,119 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Etiqueta meta para que se vea bien en móviles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que se muestra en la pestaña del navegador -->
+    <title>Ejemplo Tienda Online</title>
+    <!-- Vinculamos el archivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 1. ENCABEZADO CON LOGO, MENÚ Y BANNER -->
+    <header>
+        <!-- Logotipo -->
+        <div class="logo">
+            <img src="DULCE AMANECER.png" alt="Logo de la tienda">
+        </div>
+
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner principal -->
+    <div class="banner">
+        <div class="capa"></div>
+        <div class="info">
+            <h1>Dulce Amanecer</h1>
+            <p>registro</p>
+
+            <a href="">seccion</a>
+            <a href="">registro</a>
+        </div>
+    </div>
+
+    <!-- 2. SLIDER DE PRODUCTOS -->
+    <div class="slider">
+        <!-- Radios para controlar el slider -->
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+
+        <!-- Slides -->
+        <div class="slides">
+            <div class="item">
+                <img src="Croissants-20-7-500x500.webp" alt="Producto 1">
+                <h3>Croissants</h3>
+                <p>$50.00</p>
+            </div>
+            <div class="item">
+                <img src="galletaschocolate.png" alt="producto 2">
+                <h3>Galletas</h3>
+                <p>$70.00</p>
+            </div>
+            <div class="item">
+                <img src="images.jfif" alt="producto 3">
+                <h3>Pan de bono</h3>
+                <p>$90.00</p>
+            </div>
+        </div>
+
+        <!-- Controles de navegación -->
+        <div class="navigation">
+            <label for="slide1" class="bar"></label>
+            <label for="slide2" class="bar"></label>
+            <label for="slide3" class="bar"></label>
+        </div>
+    </div>
+    </div> <!-- ← Cierre del slider -->
+
+    <!-- 2.5 SECCIÓN DE VIDEO -->
+    <section class="video">
+        <h2>Conoce nuestro proceso artesanal</h2>
+        <video controls autoplay muted loop width="600">
+            <source src="1000024564.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </section>
+
+    <!-- 3. BOTONES DE LLAMADO A LA ACCIÓN -->
+    <section class="acciones">
+        <button>Compra Ahora</button>
+        <button>Ver Producto</button>
+        <button>Ver Oferta</button>
+    </section>
+
+    <!-- 4. FORMULARIO DE CONTACTO -->
+    <section class="contacto">
+        <h2>Contáctanos</h2>
+        <form>
+            <!-- Campo para el nombre -->
+            <input type="text" placeholder="Tu nombre" required>
+            <!-- Campo para el correo -->
+            <input type="email" placeholder="Tu correo" required>
+            <!-- Campo para el mensaje -->
+            <textarea placeholder="Tu mensaje"></textarea>
+            <!-- Botón de envío -->
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+
+
+
+</body>
+
+</html>
